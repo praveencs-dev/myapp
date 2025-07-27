@@ -42,6 +42,7 @@
 #send{
     height:30px;
     width: 55px;
+    touch-action: manipulation;
     border-radius: 5px;
     display: none;
 
@@ -75,8 +76,8 @@ p{
             <div id="chat">
             </div>
             <div class="int">
-                <input type="text" id="message" placeholder="Enter your message">
-                <button id="send" onclick="sendmessage()">send</button>
+                <input type="text" id="message" placeholder="Enter your message" autocomplete="off">
+                <button id="send" onclick="sendmessage()" >send</button>
             </div>
         </div>
     </div>
