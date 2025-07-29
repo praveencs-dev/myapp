@@ -13,4 +13,5 @@ def handle_send_message(data):
     print(f"{username}:{message}:{time}")
     emit('recievemessage',{'username':username,'message':message,'time':time},broadcast=True)
 if __name__=='__main__':
-    socketio.run(app,debug=True)
+     port=int(os.environ.get('PORT',5000))
+     socketio.run(app,host='0.0.0.0',port=port,debug=True)
